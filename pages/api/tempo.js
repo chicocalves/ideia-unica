@@ -10,7 +10,7 @@ async function tempo(request, response){
     const consultaEnderecoResponseJson = await consultaEnderecoResponse.json()
     const endereco = consultaEnderecoResponseJson.logradouro
 
-    response.setHeader('Cache-Control', 's-maxage=60, state-while-revalidate')
+    response.setHeader('Cache-Control', 's-maxage=10, state-while-revalidate')
 
     response.json({
         date: dynamicDate.toGMTString(),
